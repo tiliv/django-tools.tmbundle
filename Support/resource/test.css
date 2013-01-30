@@ -1,0 +1,60 @@
+body {
+    font-family: HelveticaNeue-Light;
+    margin: auto 0;
+    padding: 0 1em;
+}
+
+pre, code {
+    font: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.test-pass {
+    color: green;
+}
+.test-fail {
+    color: red;
+}
+.test-error {
+    color: orange;
+}
+.test-skip {
+    color: blue;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li:first-child {
+    border-top: 1px solid #dfdfdf;
+}
+
+li {
+    border-bottom: 1px solid #dfdfdf;
+    overflow-x: auto;
+    padding: 0 0.75em;
+}
+
+li:nth-child(odd) {
+    background-color: #f9fbff;
+}
+
+li h2 {
+    margin: 0;
+}
+li h3 {
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 0;
+}
+
+li hr {
+    display: none;
+}
+
+#summary {
+    background: yellow;
+}

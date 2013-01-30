@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autoScrollOutput</key>
+	<true/>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+
+read -r -d '' output &lt;&lt;HTML
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;link type='text/css' rel='stylesheet' href="file:///$TM_BUNDLE_SUPPORT/resource/update.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;Updating submodules&lt;/h3&gt;
+    &lt;ul&gt;
+HTML
+echo $output
+
+find ${SUBMODULES_DIRECTORY:-lib}/* -type d -maxdepth 0 | while read -a submodule_dir
+do
+    cd $TM_PROJECT_DIRECTORY/$submodule_dir
+    submodule_dir=$(basename $submodule_dir)
+    if ! [[ "$(git remote -v | head -n 1)" =~ pivotal-energy-solutions\/axis ]]; then
+        if [[ "$(git status)" =~ ^#\ Not\ currently\ on\ any\ branch ]]; then
+            echo "&lt;li class='switch'&gt;$submodule_dir (no branch)&lt;ul&gt;"
+            echo "&lt;li&gt;Switching to branch master...&lt;code&gt;&lt;pre&gt;"
+            git checkout master 2&gt;&amp;1
+            echo "&lt;/pre&gt;&lt;/code&gt;&lt;/li&gt;"
+        else
+            branch="$(git status | head -n 1 | sed -E 's/# On branch (.*)$/\1/')"
+            echo "&lt;li class='pull'&gt;$submodule_dir ($branch)&lt;ul&gt;"
+        fi
+        echo "&lt;li&gt;Pulling from origin...&lt;code&gt;&lt;pre&gt;"
+        git pull 2&gt;&amp;1
+        echo "&lt;/pre&gt;&lt;/code&gt;&lt;/li&gt;"
+        echo "&lt;/ul&gt;&lt;/li&gt;"
+    fi
+done
+
+read -r -d '' output &lt;&lt;HTML
+    &lt;/ul&gt;
+    &lt;h4&gt;Done.&lt;/h4&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+HTML
+echo $output
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>~@U</string>
+	<key>name</key>
+	<string>Pull all $SUBMODULES_DIRECTORY/*</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>scope</key>
+	<string>attr.project.pes</string>
+	<key>uuid</key>
+	<string>C6A7EC58-1EE4-4356-A499-439474D38090</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,36 @@
+body {
+    font-family: HelveticaNeue-Light;
+    margin: auto 0;
+    padding: 0 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+body > ul {
+    padding: 0;
+}
+
+body > ul > li:first-child {
+    border-top: 1px solid #dfdfdf;
+}
+
+body > ul > li {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+body > ul > li:nth-child(odd) {
+    background-color: #f9fbff;
+}
+
+code {
+    font: 10pt Menlo;
+}
+
+.pull {
+/*    color: #007700;*/
+}
+
+.switch {
+    color: #777700;
+}

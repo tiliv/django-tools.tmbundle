@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#! /bin/bash
+
+"$TM_BUNDLE_SUPPORT"/open_terminal_with_env.sh
+
+osascript &lt;&lt;- APPLESCRIPT
+	tell app "Terminal"
+        do script "$("$TM_BUNDLE_SUPPORT"/echo_variables.sh DJANGO_)" in window 0
+	end tell
+APPLESCRIPT
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^~@.</string>
+	<key>name</key>
+	<string>Open Terminal with env</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>scope</key>
+	<string>source.python, attr.project.django</string>
+	<key>uuid</key>
+	<string>1B534DA4-FA17-4490-B5A0-F4E30E452FF9</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

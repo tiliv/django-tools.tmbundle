@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>ginyragn@cvibgnyraretlfbyhgvbaf.pbz</string>
+	<key>contactName</key>
+	<string>Tim Valenta</string>
+	<key>description</key>
+	<string>Utilities for managing Pivotal Energy Solutions' Django Axis project</string>
+	<key>name</key>
+	<string>Pivotal Django Tools</string>
+	<key>uuid</key>
+	<string>F792064B-1770-4FF0-B6D7-5A8422C84763</string>
+    <key>mainMenu</key>
+    <dict>
+        <key>items</key>
+        <array>
+            <string>A30EF721-A6EF-434F-8789-A13D9D118586</string>
+            <string>DD1DD919-091D-44B8-8595-3BB2FE244F9C</string>
+            <string>------------------------------------</string>
+        </array>
+        <key>submenus</key>
+        <dict>
+            <key>DD1DD919-091D-44B8-8595-3BB2FE244F9C</key>
+            <dict>
+                <key>name</key>
+                <string>Deploy</string>
+                <key>items</key>
+                <array>
+                    <string>594ED858-3224-4260-B2FB-3FF35D6654D9</string>
+                </array>
+            </dict>
+            <key>A30EF721-A6EF-434F-8789-A13D9D118586</key>
+            <dict>
+                <key>name</key>
+                <string>Manage</string>
+                <key>items</key>
+                <array>
+                    <string>6B102E4C-7DB8-4FAC-8746-4263340E09C9</string>
+                    <string>E714E01A-3176-44F3-9025-54D1F1B0B105</string>
+                    <string>B90F80F9-AA6E-4610-B56F-821B78E82E07</string>
+                    <string>------------------------------------</string>
+                    <string>0D661E23-800E-4225-AE5F-D7AFDFAFE0A4</string>
+                    <string>418CADF2-851B-4C99-8973-D128E2AC7EFE</string>
+                    <string>CE88F8EF-230A-4E01-B59C-A5F4CBFB9071</string>
+                    <string>544F716A-EDB1-407C-9463-D8BEA423A70C</string>
+                </array>
+            </dict>
+        </dict>
+    </dict>
+    
+</dict>
+</plist>
