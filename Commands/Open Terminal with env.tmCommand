@@ -11,6 +11,7 @@
 
 osascript &lt;&lt;- APPLESCRIPT
 	tell app "Terminal"
+        delay 0.1
         do script "$("$TM_BUNDLE_SUPPORT"/echo_variables.sh DJANGO_)" in window 0
 	end tell
 APPLESCRIPT
@@ -20,9 +21,9 @@ APPLESCRIPT
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>^~@.</string>
+	<string>@.</string>
 	<key>name</key>
-	<string>Open Terminal with env</string>
+	<string>Open Terminal here</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
