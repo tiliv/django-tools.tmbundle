@@ -7,11 +7,16 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/bin/bash
+	<string>#! /bin/bash
 
-"$TM_BUNDLE_SUPPORT/activate_env.sh"
+"$TM_BUNDLE_SUPPORT"/open_terminal_with_env.sh
 
-fab -R staging deploy 2&gt;&amp;1
+osascript &lt;&lt;- APPLESCRIPT
+	tell app "Terminal"
+        delay 0.1
+        do script "fab -R staging deploy" in window 0
+	end tell
+APPLESCRIPT
 </string>
 	<key>input</key>
 	<string>none</string>
@@ -20,13 +25,15 @@ fab -R staging deploy 2&gt;&amp;1
 	<key>keyEquivalent</key>
 	<string>^~@</string>
 	<key>name</key>
-	<string>Deploy to staging</string>
+	<string>staging</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
 	<string>html</string>
 	<key>outputLocation</key>
 	<string>newWindow</string>
+	<key>scope</key>
+	<string>attr.project.pes</string>
 	<key>uuid</key>
 	<string>594ED858-3224-4260-B2FB-3FF35D6654D9</string>
 	<key>version</key>
