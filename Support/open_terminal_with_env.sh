@@ -19,3 +19,4 @@ osascript <<- APPLESCRIPT
         do script "clear" in window 0
 	end tell
 APPLESCRIPT
+"$TM_BUNDLE_SUPPORT"/clear_scrollback.sh

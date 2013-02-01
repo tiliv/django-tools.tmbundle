@@ -7,3 +7,4 @@ osascript <<- APPLESCRIPT
         do script "./manage.py $1 --settings=$DJANGO_SETTINGS_MODULE" in window 0
     end tell
 APPLESCRIPT
+"$TM_BUNDLE_SUPPORT"/clear_scrollback.sh
