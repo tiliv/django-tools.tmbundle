@@ -1,6 +1,7 @@
 #!/bin/bash
 
 osascript <<-APPLESCRIPT
+    delay 0.1
     tell application "System Events"
         tell process "Terminal"
             tell menu bar 1

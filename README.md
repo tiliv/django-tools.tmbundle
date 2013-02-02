@@ -82,6 +82,13 @@ Name of the virtualenv available for activation via the virtualenvwrapper comman
 
 `VIRTUALENVWRAPPER` will trump plain old `VIRTUALENV` if the two settings are both available.
 
+To successfully use a couple of commands, ones that run within TextMate's process (not a separate Terminal tab), your `PATH` will need to include the location of `virtualenvwrapper.sh`, which is normally `source`d in your `.bash_profile`.  TextMate doesn't run that profile script or make changes to environment variables, so you may need to help it out in your `.tm_properties`:
+
+    # My virtualenvwrapper.sh is located in my macports-activated Python framework 
+    PATH = "/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin:$PATH"
+
+Alternately, if this is a common requirement, you can pop open TextMate's preferences and use the _Variables_ tab to enter the same information for TextMate's global (not project) use.
+
 ## Commands
 Commands that open the Terminal make an effort to try to activate the local [virtualenv](http://www.virtualenv.org/en/latest/) or [virtualenvwrapper](http://www.doughellmann.com/projects/virtualenvwrapper/).  Make sure you set the [`VIRTUALENV`](#virtualenv) or [`VIRTUALENVWRAPPER`](#virtualenvwrapper) variables in your `.tm_properties` accordingly.
 

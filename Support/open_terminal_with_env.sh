@@ -15,7 +15,7 @@ osascript <<- APPLESCRIPT
 	    launch
 	    activate
 	    do script "cd $(esc "${TM_PROJECT_DIRECTORY}")"
-        do script "VIRTUALENV=$VIRTUALENV VIRTUALENVWRAPPER=$VIRUALENVWRAPPER source '$TM_BUNDLE_SUPPORT/activate_env.sh'" in window 0
+        do script "VIRTUALENV=$VIRTUALENV VIRTUALENVWRAPPER=$VIRTUALENVWRAPPER source '$TM_BUNDLE_SUPPORT/activate_env.sh'" in window 0
         do script "clear" in window 0
 	end tell
 APPLESCRIPT

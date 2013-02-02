@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#! /bin/bash
+	<string>#!/bin/bash
 
 "$TM_BUNDLE_SUPPORT"/open_terminal_with_env.sh
 
@@ -17,7 +17,7 @@ osascript &lt;&lt;- APPLESCRIPT
 APPLESCRIPT
 </string>
 	<key>input</key>
-	<string>selection</string>
+	<string>none</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
