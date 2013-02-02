@@ -10,9 +10,9 @@ RUBY
 }
 
 if [ $1 ]; then
-    # Echoes back variables with names beginning with $1
+    # Echoes back the "export" names beginning with $1
     for var in $(eval echo "\${!$1@}")
     do
-        echo "$var=$(esc "${!var}")"
+        echo "export $var=$(esc "${!var}")"
     done
 fi

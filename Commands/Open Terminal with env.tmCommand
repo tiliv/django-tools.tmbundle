@@ -8,13 +8,6 @@
 	<string>#!/bin/bash
 
 "$TM_BUNDLE_SUPPORT"/open_terminal_with_env.sh
-
-osascript &lt;&lt;- APPLESCRIPT
-	tell app "Terminal"
-        delay 0.1
-        do script "$("$TM_BUNDLE_SUPPORT"/echo_variables.sh DJANGO_)" in window 0
-	end tell
-APPLESCRIPT
 </string>
 	<key>input</key>
 	<string>none</string>
