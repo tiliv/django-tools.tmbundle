@@ -31,9 +31,9 @@ APPLESCRIPT
 	<key>outputFormat</key>
 	<string>html</string>
 	<key>outputLocation</key>
-	<string>newWindow</string>
+	<string>discard</string>
 	<key>scope</key>
-	<string>attr.project.pes</string>
+	<string>attr.project.django</string>
 	<key>uuid</key>
 	<string>594ED858-3224-4260-B2FB-3FF35D6654D9</string>
 	<key>version</key>
