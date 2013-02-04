@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>class Media:
+    $1
+</string>
+	<key>name</key>
+	<string>Media inner class</string>
+	<key>scope</key>
+	<string>source.python.django</string>
+	<key>tabTrigger</key>
+	<string>media</string>
+	<key>uuid</key>
+	<string>09761F3D-E09A-4810-97AE-68C5D2083518</string>
+</dict>
+</plist>
