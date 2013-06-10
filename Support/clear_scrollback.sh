@@ -2,6 +2,9 @@
 
 osascript <<-APPLESCRIPT
     delay 0.1
+    tell application "Terminal"
+        activate
+    end tell
     tell application "System Events"
         tell process "Terminal"
             tell menu bar 1
