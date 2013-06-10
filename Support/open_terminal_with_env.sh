@@ -12,7 +12,6 @@ RUBY
 
 osascript <<-APPLESCRIPT
 	tell app "Terminal"
-	    launch
 	    activate
         tell application "System Events"
             keystroke "t" using {command down}
