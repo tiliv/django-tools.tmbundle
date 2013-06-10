@@ -11,10 +11,21 @@
 
 "$TM_BUNDLE_SUPPORT"/open_terminal_with_env.sh 2&gt;&amp;1
 
-osascript &lt;&lt;- APPLESCRIPT
+role="${FABRIC_DEPLOY_ROLE:-staging}"
+command="fab -R $role deploy"
+ROLE="$(tr '[:lower:]' '[:upper:]' &lt;&lt;&lt; $role)"
+password_var="FABRIC_${ROLE}_PASSWORD"
+PASSWORD="${!password_var}"
+
+if [ $PASSWORD ]; then
+    command="$command -p '$PASSWORD'"
+fi
+
+osascript &lt;&lt;-APPLESCRIPT
 	tell app "Terminal"
+        activate
         delay 0.1
-        do script "fab -R staging deploy" in window 0
+        do script "$command" in window 0
 	end tell
 APPLESCRIPT
 </string>
