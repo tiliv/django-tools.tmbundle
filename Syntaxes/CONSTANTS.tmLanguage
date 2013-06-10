@@ -6,6 +6,8 @@
 	<array/>
 	<key>injectionSelector</key>
 	<string>source</string>
+	<key>isDisabled</key>
+	<false/>
 	<key>name</key>
 	<string>CONSTANTS</string>
 	<key>patterns</key>
